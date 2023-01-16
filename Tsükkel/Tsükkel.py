@@ -1,21 +1,27 @@
-
+from random import *
 
 #0
 while True:
+    print("Tere Tulemast!")
+    print("Latte, 2.50 euro.")
+    print("Espresso, 2 euro.")
+    print("Cappuccino, 3 euro.")
+    print("Kakao, 2.20 euro.")
     try:
-        print("Latte, 2.50 euro.")
-        print("Espresso, 2 euro.")
-        print("Cappuccino, 3 euro.")
-        print("Kakao, 2.20 euro.")
         s=float(input("Sisestage summa:"))
         if s<2 and s>3: break
-        if s<3 and s>2: 
-            m=int("Valige makseviis:")
-            if m.upper()=="sulraha":
-                if m.upper=="kaardiga":
-                    n=int(input("Sisestage kaardi number:"))
-                    print(n,"selle kaardiga on tehtud makse.")
+        m=input("Valige makseviis:")
+        while m.lower()=="kaardiga":
+            n=int(input("Sisestage kaardi number:"))
+            print(n,"selle kaardiga on tehtud makse")
+            continue
+        if m.lower()=="sulraha": continue
+                
+    except:
+        print("!!")
 
+
+while True:
         print("Latte")
         print("Espresso")
         print("Cappuccino")
@@ -51,29 +57,118 @@ while True:
                 print("lisage 3/4 piima")
                 print("lisa 1/4 kakaod")
                 print("Teie kakao on valmis!")
+            else:
+                break
         except:
             print("Kirjuta kohvi nimed!!!")
-    except:
-        print("Suur summa!!!")
-       
 
 
 
 
 
-print()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #1
 while True:
     try:
-        nimi=input("Palun sisesta oma nimi: ")
-        n=int(input("Palun sisesta mitu korda soovid tervitust saada: "))
+        nimi=input("Palun sisesta oma nimi:")
         if nimi=="SIIM":
             n=int(input("Palun sisesta mitu korda soovid tervitust saada: ")) # n=korda
-        for i in range(1, n+1): # i=katsete arv
-            print(f"Ole tervitatud, {nimi}, {i}. korda.")
+            for i in range(1, n+1): # i=katsete arv
+                print(f"Ole tervitatud, {nimi}, {i}. korda.")
+        else:
+            break
     except:
         print("!!!")
 
 
 
+
+
+#22
+print("Ma than kommi")
+katsed=0
+while True:
+    answer=input("Tahan kommi!")
+    katsed+=1
+    if answer.lower()=="komm":
+        print(f"Teil kommid kirjitakse kulus {katsed}, katse")
+       
+    katsed=0
+    answer=""
+    while answer!="komm":
+        answer=input("Tahan kommi!")
+        katsed+=1
+        if answer.upper()=="JÄH":
+            katsed=0
+            continue
+        else:
+            break
+print(f"Katsed: {katsed}")
+       
+
+
+
+#
+p=0
+while True:
+    number= int(input("Sisetage number suurem kui 10: "))
+    p+=1
+    if number >=10:
+        print("Õigesti")
+        break
+    else:
+        print("Arv on liiga väike")
+print("katsed", p)
+
+
+
+
+
+#
+print("Arvuti mõistatab numbrit 1-10 ja sina üriitad seda ära arvata.")
+a=randint(1,10)
+vastus=int(input("mis arv on mõisttanud arvuti?:"))
+k=p=1
+while vastus!=a:
+    print("Ära sa ei arvanud ära, proovi uuesti!:")
+    vastus=int(input("Sisesta vastus:"))
+    k+=1
+    p+=1
+    if k>2:
+        print("Püüdlused on lõppenud")
+        b=input("Kas proovi veel kord:")
+        if b.upper()=="JÄH":          
+            k=0
+            continue
+        else:
+            break
+if vastus==a:
+    print("Palju õnne, sa arvasid ära!", p)
+
+print()
+#0
+
+
+
+       
+
+
+print()
+
+#1
