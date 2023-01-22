@@ -1,26 +1,58 @@
 from random import *
+from math import*
+
+#
+nn=int(input("Posiitivne arv:"))
+while True:
+    print(nn, end=" ")
+    nn-=1
+    if nn<0:
+        break
+
+
+#9
+n=int(input("Sisestgae number n: "))
+for i in range(1, 11):
+    print(f" {n} * {i} = {n*i}")
+
+#
+positive=0
+negative=0
+a=1
+while True:
+    a=int(input("sisestage number: "))
+    if a>0: positive+=a
+    elif a<0: negative+=a
+    else: break
+print("Posiitivne:", positive, "Negativne:", negative)
+
+
+
+
 
 #0
 while True:
     print("Tere Tulemast!")
-    print("Latte, 2.50 euro.")
-    print("Espresso, 2 euro.")
-    print("Cappuccino, 3 euro.")
-    print("Kakao, 2.20 euro.")
     try:
+        print("Latte, 2.50 euro.")
+        print("Espresso, 2 euro.")
+        print("Cappuccino, 3 euro.")
+        print("Kakao, 2.20 euro.")
         s=float(input("Sisestage summa:"))
-        if s<2 and s>3: break
-        m=input("Valige makseviis:")
-        while m.lower()=="kaardiga":
+        if s<2 or s>3: break
+        m=input("Valige makseviis: ")
+
+        if m.lower()=="sularaha":
+            hind=float(input("Anna raha: "))
+        if s==hind:
+            print("Oodake!")
+        elif s<hind:
+            print(f"Teile tagasiraha {s-hind}, oodake sinu soojanejöök!")
+        if m.lower()=="kaardiga":
             n=int(input("Sisestage kaardi number:"))
-            print(n,"selle kaardiga on tehtud makse")
-            continue
-        if m.lower()=="sulraha": continue
-                
+            print(n,"selle kaardiga on tehtud makse.")
     except:
         print("!!")
-
-
 while True:
         print("Latte")
         print("Espresso")
@@ -28,17 +60,17 @@ while True:
         print("Kakao")
         try:
             j=int("Valige jook:")
-            latte="Latte"
-            espresso="Espresso"
-            cappuccino="Cappuccino"
-            kakao="Kakao"
+            latte="latte"
+            espresso="espresso"
+            cappuccino="cappuccino"
+            kakao="kakao"
             if j==latte:
                 print("soojenemine")
                 print("lisa 1/4 vahustatud piima")
                 print("lisage 2/4 piima")
                 print("lisa 1/4 kohvi")
                 print("Teie Latte on valmis!")
-
+               
             elif j==espresso:
                 print("soojenemine")
                 print("lisage vett")
@@ -62,27 +94,6 @@ while True:
         except:
             print("Kirjuta kohvi nimed!!!")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #1
 while True:
     try:
@@ -95,7 +106,6 @@ while True:
             break
     except:
         print("!!!")
-
 
 
 
@@ -162,13 +172,3 @@ if vastus==a:
     print("Palju õnne, sa arvasid ära!", p)
 
 print()
-#0
-
-
-
-       
-
-
-print()
-
-#1
